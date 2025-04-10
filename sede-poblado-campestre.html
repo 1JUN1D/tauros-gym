@@ -76,7 +76,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -129,6 +129,14 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDKG7QXC" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+  <div id="flyer-overlay">
+    <div class="flyer-content" onclick="redirectToPromo()">
+      <!-- Botón de cierre -->
+      <button class="close-flyer" onclick="closeFlyer(); event.stopPropagation()">×</button>
+      <!-- Aquí incluye tu flyer. Puedes usar una imagen o el contenido que desees -->
+      <img src="./flyer.jpeg" alt="Flyer Promocional" style="width: 100%; display: block;">
+    </div>
+  </div>
 
   <!-- NAV -->
   <div class="nav-wrapper">
@@ -256,6 +264,26 @@
     });
   </script>
   <!-- Código para inicializar el visor 360 (código existente) -->
+  <script>
+    // Función para cerrar el overlay manualmente
+    function closeFlyer() {
+      const overlay = document.getElementById('flyer-overlay');
+      if (overlay) {
+        overlay.style.display = 'none';
+      }
+    }
+
+    // Función para redirigir a la URL del sorteo cuando se clickea el contenedor
+    function redirectToPromo() {
+      window.location.href = "https://www.dondeseria.com/sorteo/web_yl90.html";
+    }
+
+    // Cierra el flyer automáticamente después de 3 segundos (3000 milisegundos)
+    window.addEventListener('load', function () {
+      setTimeout(closeFlyer, 3000);
+    });
+  </script>
+
   <script type="importmap">
   {
     "imports": {
@@ -294,7 +322,7 @@
             position:
               { yaw: 1.5226044594589176, pitch: -0.1267484044553484 }
           }],
-          sphereCorrection: { pan: '320deg' },
+          sphereCorrection: { pan: '320deg' ,tilt: '-5deg',},
         },
         {
           id: 'nodo2',
@@ -306,7 +334,7 @@
             { nodeId: 'nodo1', position: { yaw: 5.52396315425779, pitch: 0.0279436832720239 } },
             { nodeId: 'nodo3', position: { yaw: 2.56017355181475, pitch: -0.50822241802598 } },
           ],
-          sphereCorrection: { pan: '220deg' },
+          sphereCorrection: { pan: '220deg',tilt: '-5deg', },
         },
         {
           id: 'nodo3',
@@ -319,7 +347,7 @@
             { nodeId: 'nodo1', position: { yaw: 3.6677509376079267, pitch: -0.07179634720837669 } },
             { nodeId: 'nodo2', position: { yaw: 5.218472938600556, pitch: -0.061652323759080474 } },
           ],
-          sphereCorrection: { pan: '290deg' },
+          sphereCorrection: { pan: '290deg' ,tilt: '-5deg',},
         },
         {
           id: 'nodo4',
@@ -331,7 +359,7 @@
             { nodeId: 'nodo3', position: { yaw: 5.774842787572949, pitch: -0.368994433844235 } },
             { nodeId: 'nodo5', position: { yaw: 3.8106586746912465, pitch: -0.36613974190592646 } },
           ],
-          sphereCorrection: { pan: '130deg' },
+          sphereCorrection: { pan: '130deg',tilt: '-5deg', },
         },
         {
           id: 'nodo5',
@@ -343,7 +371,7 @@
             { nodeId: 'nodo6', position: { yaw: 3.138740935247414, pitch: -0.2860910696119525 } },
             { nodeId: 'nodo4', position: { yaw: 6.110282723435069, pitch: -0.21806851492037893 } },
           ],
-          sphereCorrection: { pan: '180deg' },
+          sphereCorrection: { pan: '180deg',tilt: '-5deg', },
         },
         {
           id: 'nodo6',
@@ -355,7 +383,7 @@
             { nodeId: 'nodo7', position: { yaw: 2.996791844316999, pitch: -0.27979574666702556 } },
             { nodeId: 'nodo5', position: { yaw: 6.090229168604001, pitch: -0.23714519962047564 } },
           ],
-          sphereCorrection: { pan: '180deg' },
+          sphereCorrection: { pan: '180deg' ,tilt: '-5deg',},
         },
         {
           id: 'nodo7',
@@ -368,7 +396,7 @@
             { nodeId: 'nodo6', position: { yaw: 0.3451355470145123, pitch: -0.2059216808544151 } },
             { nodeId: 'nodo10', position: { yaw: 1.8226217782097673, pitch: -0.28063440224914205 } },
           ],
-          sphereCorrection: { pan: '180deg' },
+          sphereCorrection: { pan: '180deg',tilt: '-5deg', },
         },
         {
           id: 'nodo8',
@@ -380,7 +408,7 @@
             { nodeId: 'nodo9', position: { yaw: 1.5879862542681562, pitch: -0.2895247576236355 } },
             { nodeId: 'nodo7', position: { yaw: 0.08029456703698332, pitch: -0.16459176977842338 } },
           ],
-          sphereCorrection: { pan: '180deg' },
+          sphereCorrection: { pan: '180deg',tilt: '-5deg', },
         },
         {
           id: 'nodo9',
@@ -392,7 +420,7 @@
             { nodeId: 'nodo10', position: { yaw: 1.495878314820161, pitch: -0.2750106474848928 } },
             { nodeId: 'nodo8', position: { yaw: 6.149717150289948, pitch: -0.30803242551384535 } },
           ],
-          sphereCorrection: { pan: '250deg' },
+          sphereCorrection: { pan: '250deg',tilt: '-5deg', },
         },
         {
           id: 'nodo10',
@@ -404,7 +432,7 @@
             { nodeId: 'nodo7', position: { yaw: 0.20847458087339243, pitch: -0.32562089574767894 } },
             { nodeId: 'nodo9', position: { yaw: 4.908808568640357, pitch: -0.254454888834319 } },
           ],
-          sphereCorrection: { pan: '250deg' },
+          sphereCorrection: { pan: '250deg',tilt: '-5deg', },
         },
       ],
       2: [
@@ -418,7 +446,7 @@
             { nodeId: 'nodo12', position: { yaw: 1.8342289633645894, pitch: -0.0825738217091847 } },
             { nodeId: 'nodo16', position: { yaw: 3.064131608145039, pitch: -0.2783911587824899 } },
           ],
-          sphereCorrection: { pan: '140deg' },
+          sphereCorrection: { pan: '140deg',tilt: '-5deg', },
         },
         {
           id: 'nodo12',
@@ -431,7 +459,7 @@
             { nodeId: 'nodo11', position: { yaw: 4.965947540970134, pitch: -0.2428512536093903 } },
             { nodeId: 'nodo16', position: { yaw: 3.9350892813082683, pitch: -0.23825878278569235 } },
           ],
-          sphereCorrection: { pan: '140deg' },
+          sphereCorrection: { pan: '140deg',tilt: '-5deg', },
         },
         {
           id: 'nodo13',
@@ -443,7 +471,7 @@
             { nodeId: 'nodo14', position: { yaw: 3.7766700962303097, pitch: -0.13012659534650783 } },
             { nodeId: 'nodo12', position: { yaw: 5.201658712632915, pitch: -0.24867604935387444 } },
           ],
-          sphereCorrection: { pan: '140deg' },
+          sphereCorrection: { pan: '140deg',tilt: '-5deg', },
         },
         {
           id: 'nodo14',
@@ -456,7 +484,7 @@
             { nodeId: 'nodo16', position: { yaw: 4.921008794720321, pitch: -0.17743326446739394 } },
             { nodeId: 'nodo20', position: { yaw: 3.8153372265909233, pitch: -0.21546174401633866 } },
           ],
-          sphereCorrection: { pan: '140deg' },
+          sphereCorrection: { pan: '140deg' ,tilt: '-5deg',},
         },
         {
           id: 'nodo15',
@@ -467,7 +495,7 @@
           links: [
             { nodeId: 'nodo16', position: { yaw: 3.0535343542155116, pitch: -0.1291745642214681 } }
           ],
-          sphereCorrection: { pan: '140deg' },
+          sphereCorrection: { pan: '140deg',tilt: '-5deg', },
         },
         {
           id: 'nodo16',
@@ -480,7 +508,7 @@
             { nodeId: 'nodo14', position: { yaw: 2.9319915217132166, pitch: -0.19252541081825703 } },
             { nodeId: 'nodo17', position: { yaw: 3.936902684971575, pitch: -0.28630510585905933 } },
           ],
-          sphereCorrection: { pan: '140deg' },
+          sphereCorrection: { pan: '140deg',tilt: '-5deg', },
         },
         {
           id: 'nodo17',
@@ -494,7 +522,7 @@
             { nodeId: 'nodo14', position: { yaw: 1.2153401115315663, pitch: -0.10044226800692746 } },
             { nodeId: 'nodo20', position: { yaw: 2.4311959739137947, pitch: -0.0857702706750123 } },
           ],
-          sphereCorrection: { pan: '320deg' },
+          sphereCorrection: { pan: '320deg',tilt: '-5deg', },
         },
         {
           id: 'nodo18',
@@ -506,7 +534,7 @@
             { nodeId: 'nodo19', position: { yaw: 3.4764062537824305, pitch: -0.06296036028773377 } },
             { nodeId: 'nodo17', position: { yaw: 0.908874705961818, pitch: -0.21505030847339413 } },
           ],
-          sphereCorrection: { pan: '260deg' },
+          sphereCorrection: { pan: '260deg',tilt: '-5deg', },
         },
         {
           id: 'nodo19',
@@ -518,7 +546,7 @@
             { nodeId: 'nodo20', position: { yaw: 5.617274004629111, pitch: -0.0560762913875088 } },
             { nodeId: 'nodo17', position: { yaw: 4.7669779565904635, pitch: -0.1126603675984752 } },
           ],
-          sphereCorrection: { pan: '140deg' },
+          sphereCorrection: { pan: '140deg',tilt: '-5deg', },
         },
         {
           id: 'nodo20',
@@ -531,7 +559,7 @@
             { nodeId: 'nodo19', position: { yaw: 5.548355042507596, pitch: -0.08207629132498129 } },
             { nodeId: 'nodo14', position: { yaw: 2.19416073274009, pitch: -0.10170703199319986 } },
           ],
-          sphereCorrection: { pan: '140deg' },
+          sphereCorrection: { pan: '140deg' ,tilt: '-5deg',},
         },
       ],
     };

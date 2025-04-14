@@ -434,16 +434,16 @@
           panorama: `${baseUrl}primer-piso-6-tauros-gym.jpg`,
           thumbnail: `${baseUrl}primer-piso-6-tauros-gym.jpg`,
           markers: [
-    {
-      id: 'marker-image-nodo2',
-      imageLayer: '../mancuerna.png',  // Ruta a tu imagen (puede ser relativa)
-      position: { yaw: 1.5, pitch: 0 },  // Ajusta los valores según donde lo quieras posicionar
-      size: { width: 602, height: 522 },     // Tamaño del marker
-      // anchor y rotation se pueden agregar si es necesario, por ejemplo:
-      // anchor: { x: 0.5, y: 0.5 },
-      // rotation: 45
-    }
-  ],
+            {
+              id: 'marker-image-nodo2',
+              imageLayer: '../mancuerna.png',  // Ruta a tu imagen (puede ser relativa)
+              position: { yaw: 1.5, pitch: 0 },  // Ajusta los valores según donde lo quieras posicionar
+              size: { width: 602, height: 522 },     // Tamaño del marker
+              // anchor y rotation se pueden agregar si es necesario, por ejemplo:
+              // anchor: { x: 0.5, y: 0.5 },
+              // rotation: 45
+            }
+          ],
           name: 'Primer Piso',
           caption: 'Primer Piso Tauros Gym',
           links: [
@@ -779,7 +779,10 @@
         [
           VisibleRangePlugin,
           {}
-        ]
+        ],
+        [AutorotatePlugin, {
+          autorotatePitch: '5deg',
+        }],
       ]
     });
 

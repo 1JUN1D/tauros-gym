@@ -129,14 +129,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDKG7QXC" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <div id="flyer-overlay">
-    <div class="flyer-content" onclick="redirectToPromo()">
-      <!-- Botón de cierre -->
-      <button class="close-flyer" onclick="closeFlyer(); event.stopPropagation()">×</button>
-      <!-- Aquí incluye tu flyer. Puedes usar una imagen o el contenido que desees -->
-      <img src="./flyer.jpeg" alt="Flyer Promocional" style="width: 100%; display: block;">
-    </div>
-  </div>
+
 
   <!-- NAV -->
   <div class="nav-wrapper">
@@ -146,13 +139,12 @@
           <i class='bx bx-webcam bx-tada main-color'></i>DÓNDE<span class="main-color"> SERÍA</span>
         </a>
         <ul class="nav-menu" id="nav-menu">
-          <li><a href="https://www.dondeseria.com/index.html">Inicio</a></li>
+          <li><a href="https://www.dondeseria.com/">Inicio</a></li>
           <li><a href="https://www.dondeseria.com/mapa/index.html">Mapa</a></li>
-
-          <li><a href="https://www.dondeseria.com/index.html">Restaurantes</a></li>
-          <li><a href="https://www.dondeseria.com/index.html">Gyms</a></li>
+          <li><a href="https://restaurantes.dondeseria.com/">Restaurantes</a></li>
+          <li><a href="https://gimnasios.dondeseria.com/">Gyms</a></li>
           <li><a href="https://www.dondeseria.com/blogs/index.html">Blogs</a></li>
-          <li><a href="https://www.dondeseria.com/index.html">Contacto</a></li>
+          <li><a href="https://www.dondeseria.com/contacto.html">Contacto</a></li>
         </ul>
         <!-- MOBILE MENU TOGGLE -->
         <div class="hamburger-menu" id="hamburger-menu">
@@ -262,26 +254,6 @@
     whatsappButton.addEventListener('click', function (e) {
       e.preventDefault();
       window.location.href = 'https://wa.link/9kxnjw';
-    });
-  </script>
-  <!-- Código para inicializar el visor 360 (código existente) -->
-  <script>
-    // Función para cerrar el overlay manualmente
-    function closeFlyer() {
-      const overlay = document.getElementById('flyer-overlay');
-      if (overlay) {
-        overlay.style.display = 'none';
-      }
-    }
-
-    // Función para redirigir a la URL del sorteo cuando se clickea el contenedor
-    function redirectToPromo() {
-      window.location.href = "https://www.dondeseria.com/sorteo/site_mz63.html";
-    }
-
-    // Cierra el flyer automáticamente después de 3 segundos (3000 milisegundos)
-    window.addEventListener('load', function () {
-      setTimeout(closeFlyer, 3000);
     });
   </script>
 

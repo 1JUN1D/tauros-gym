@@ -129,14 +129,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDKG7QXC" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <div id="flyer-overlay">
-    <div class="flyer-content" onclick="redirectToPromo()">
-      <!-- Botón de cierre -->
-      <button class="close-flyer" onclick="closeFlyer(); event.stopPropagation()">×</button>
-      <!-- Aquí incluye tu flyer. Puedes usar una imagen o el contenido que desees -->
-      <img src="./flyer.jpeg" alt="Flyer Promocional" style="width: 100%; display: block;">
-    </div>
-  </div>
+
 
   <!-- NAV -->
   <div class="nav-wrapper">
@@ -146,13 +139,12 @@
           <i class='bx bx-webcam bx-tada main-color'></i>DÓNDE<span class="main-color"> SERÍA</span>
         </a>
         <ul class="nav-menu" id="nav-menu">
-          <li><a href="https://www.dondeseria.com/index.html">Inicio</a></li>
+          <li><a href="https://www.dondeseria.com/">Inicio</a></li>
           <li><a href="https://www.dondeseria.com/mapa/index.html">Mapa</a></li>
-
-          <li><a href="https://www.dondeseria.com/index.html">Restaurantes</a></li>
-          <li><a href="https://www.dondeseria.com/index.html">Gyms</a></li>
+          <li><a href="https://restaurantes.dondeseria.com/">Restaurantes</a></li>
+          <li><a href="https://gimnasios.dondeseria.com/">Gyms</a></li>
           <li><a href="https://www.dondeseria.com/blogs/index.html">Blogs</a></li>
-          <li><a href="https://www.dondeseria.com/index.html">Contacto</a></li>
+          <li><a href="https://www.dondeseria.com/contacto.html">Contacto</a></li>
         </ul>
         <!-- MOBILE MENU TOGGLE -->
         <div class="hamburger-menu" id="hamburger-menu">
@@ -342,17 +334,7 @@
           thumbnail: `${baseUrl}3.jpg`,
           name: 'Primer Piso',
           caption: 'Primer Piso Tauros Gym',
-          markers: [
-            {
-              id: 'marker-image-nodo2',
-              imageLayer: '../mancuerna.png',  // Ruta a tu imagen (puede ser relativa)
-              position: { yaw: 1.5, pitch: 0 },  // Ajusta los valores según donde lo quieras posicionar
-              size: { width: 602, height: 522 },     // Tamaño del marker
-              // anchor y rotation se pueden agregar si es necesario, por ejemplo:
-              // anchor: { x: 0.5, y: 0.5 },
-              // rotation: 45
-            }
-          ],
+
           links: [
             { nodeId: 'nodo4', position: { yaw: 2.5174027447180554, pitch: -0.2580812439753939 } },
             { nodeId: 'nodo1', position: { yaw: 3.6677509376079267, pitch: -0.07179634720837669 } },
@@ -378,17 +360,7 @@
           thumbnail: `${baseUrl}5.jpg`,
           name: 'Primer Piso',
           caption: 'Primer Piso Tauros Gym',
-          markers: [
-            {
-              id: 'marker-image-nodo2',
-              imageLayer: '../mancuerna.png',  // Ruta a tu imagen (puede ser relativa)
-              position: { yaw: 1.5, pitch: 0 },  // Ajusta los valores según donde lo quieras posicionar
-              size: { width: 602, height: 522 },     // Tamaño del marker
-              // anchor y rotation se pueden agregar si es necesario, por ejemplo:
-              // anchor: { x: 0.5, y: 0.5 },
-              // rotation: 45
-            }
-          ],
+
           links: [
             { nodeId: 'nodo6', position: { yaw: 3.138740935247414, pitch: -0.2860910696119525 } },
             { nodeId: 'nodo4', position: { yaw: 6.110282723435069, pitch: -0.21806851492037893 } },
